@@ -1,292 +1,313 @@
+
 # Claude Code Thinking Skills
 
-> **39 Mental Models and Frameworks for Critical Thinking in Claude Code**
+> **Claude Code 中用于批判性思维的 39 个心智模型与思维框架**
 
-A comprehensive collection of thinking skills for [Claude Code](https://claude.ai/claude-code) that enhance AI-assisted problem solving, decision making, and strategic analysis. These skills provide structured frameworks based on proven mental models from leaders in systems thinking, cognitive science, and strategic analysis.
+这是一个为 [Claude Code](https://claude.ai/claude-code) 设计的、全面的思维技能集合，用于增强 AI 辅助下的问题解决、决策制定和战略分析能力。这些技能基于系统思维、认知科学和战略分析领域中成熟可靠的框架与心智模型。
 
-[![Claude Code Skills](https://img.shields.io/badge/Claude_Code-Skills-7C3AED?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMiA3TDEyIDEyTDIyIDdMMTIgMloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMiAxN0wxMiAyMkwyMiAxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDEyTDEyIDE3TDIyIDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+)](https://github.com/tjboudreaux/cc-thinking-skills)
+[![Claude Code Skills](https://img.shields.io/badge/Claude_Code-Skills-7C3AED?style=flat\&logo=data\:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMiA3TDEyIDEyTDIyIDdMMTIgMloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMiAxN0wxMiAyMkwyMiAxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yIDEyTDEyIDE3TDIyIDEyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+)](https://github.com/tjboudreaux/cc-thinking-skills)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Skills Count](https://img.shields.io/badge/Skills-39-blue)](https://github.com/tjboudreaux/cc-thinking-skills)
 
-## Features
+## 特性
 
-- **39 Thinking Frameworks** - Comprehensive mental models for better decision-making
-- **Battle-Tested** - Based on proven frameworks from cognitive science and systems thinking
-- **Claude Code Native** - Designed specifically for Claude Code's skill system
-- **Quality Scripts** - Tools to validate and enhance skill quality
-- **Zero Configuration** - Just install and invoke with skill names
+* **39 个思维框架** —— 用于提升决策质量的完整心智模型集合
+* **经过验证** —— 基于认知科学与系统思维中的成熟框架
+* **Claude Code 原生适配** —— 专为 Claude Code 的技能系统设计
+* **高质量脚本工具** —— 可用于校验和增强技能质量
+* **零配置** —— 安装后直接通过技能名调用即可
 
-## Quick Start
+## 快速开始
 
-### Installation via Plugin Marketplace (Recommended)
+### 通过插件市场安装（推荐）
 
-Install directly in Claude Code using the plugin system:
+可以直接在 Claude Code 中通过插件系统安装：
 
 ```bash
-# Add the marketplace
+# 添加市场源
 /plugin marketplace add tjboudreaux/cc-thinking-skills
 
-# Install the plugin
+# 安装插件
 /plugin install thinking-skills@thinking-skills-marketplace
 ```
 
-### Alternative: Manual Installation
+### 另一种方式：手动安装
 
-Clone and copy skills directly:
+直接克隆仓库并复制技能文件：
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/tjboudreaux/cc-thinking-skills.git
 
-# Copy skills to your global Claude Code config
+# 复制技能到全局 Claude Code 配置目录
 cp -r cc-thinking-skills/skills/* ~/.claude/skills/
 
-# Or copy to a specific project
+# 或复制到某个特定项目中
 cp -r cc-thinking-skills/skills/* /path/to/your/project/.claude/skills/
 ```
 
-### Development: Load as Local Plugin
+### 开发模式：作为本地插件加载
 
-For testing or development:
+用于测试或开发时：
 
 ```bash
 claude --plugin-dir ./cc-thinking-skills
 ```
 
-### Usage
+### 使用方式
 
-Once installed, invoke any skill by name in Claude Code:
+安装完成后，可以在 Claude Code 中通过技能名直接调用任意技能：
 
-```
+```text
 > Use first-principles thinking to analyze this architecture decision
 > Apply the pre-mortem framework to this project plan
 > Help me use Bayesian reasoning to evaluate this hypothesis
 > Use the theory of constraints to find our bottleneck
 ```
 
-## Available Skills
+## 可用技能
 
-### Decision Making & Analysis
+### 决策与分析
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-first-principles` | Break problems into fundamental truths | Innovation, challenging assumptions |
-| `thinking-second-order` | Think beyond immediate consequences | Strategic decisions, policy changes |
-| `thinking-inversion` | Approach problems by identifying paths to failure | Risk identification, planning |
-| `thinking-pre-mortem` | Imagine failure and work backward | Project kickoffs, risk assessment |
-| `thinking-kepner-tregoe` | Systematic rational process for complex analysis | High-stakes decisions, root cause analysis |
-| `thinking-reversibility` | Classify decisions by reversibility (Type 1/2) | Commitment sizing, risk assessment |
-| `thinking-regret-minimization` | Project to future self to test decisions | Career choices, major life decisions |
-| `thinking-opportunity-cost` | Evaluate choices by what you give up | Resource allocation, prioritization |
+| 技能                             | 描述                    | 最适用场景       |
+| ------------------------------ | --------------------- | ----------- |
+| `thinking-first-principles`    | 将问题拆解为最基本的事实          | 创新、挑战既有假设   |
+| `thinking-second-order`        | 思考直接后果之外的后续影响         | 战略决策、政策变化   |
+| `thinking-inversion`           | 通过识别失败路径来解决问题         | 风险识别、规划     |
+| `thinking-pre-mortem`          | 先假设失败，再倒推原因           | 项目启动、风险评估   |
+| `thinking-kepner-tregoe`       | 一种系统化、理性的复杂分析流程       | 高风险决策、根因分析  |
+| `thinking-reversibility`       | 按决策是否可逆进行分类（Type 1/2） | 承诺强度判断、风险评估 |
+| `thinking-regret-minimization` | 从未来自我的视角检验决策          | 职业选择、重大人生决策 |
+| `thinking-opportunity-cost`    | 通过放弃了什么来评估选择          | 资源分配、优先级排序  |
 
-### Cognitive & Behavioral
+### 认知与行为
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-bayesian` | Update beliefs based on evidence | Probability estimation, uncertainty |
-| `thinking-debiasing` | Identify and counteract cognitive biases | Major decisions, high stakes |
-| `thinking-dual-process` | Recognize when to trust intuition vs. analysis | Speed vs. accuracy tradeoffs |
-| `thinking-bounded-rationality` | Make good-enough decisions under constraints | Time pressure, satisficing |
-| `thinking-socratic` | Systematic questioning framework | Requirements, debugging, coaching |
-| `thinking-probabilistic` | Calibrated probability estimation | Forecasting, uncertainty quantification |
-| `thinking-steel-manning` | Argue the strongest opposing position | Debate, decision validation |
+| 技能                             | 描述              | 最适用场景       |
+| ------------------------------ | --------------- | ----------- |
+| `thinking-bayesian`            | 根据新证据动态更新信念     | 概率估计、不确定性判断 |
+| `thinking-debiasing`           | 识别并对抗认知偏差       | 重大决策、高风险判断  |
+| `thinking-dual-process`        | 判断何时依赖直觉，何时依赖分析 | 速度与准确性的权衡   |
+| `thinking-bounded-rationality` | 在约束条件下做“足够好”的决策 | 时间压力、满意解选择  |
+| `thinking-socratic`            | 系统化提问框架         | 需求分析、调试、辅导  |
+| `thinking-probabilistic`       | 校准后的概率性思维       | 预测、不确定性量化   |
+| `thinking-steel-manning`       | 用最强版本来论证对立观点    | 辩论、决策校验     |
 
-### Systems & Strategy
+### 系统与战略
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-systems` | Analyze interconnected systems | Complex debugging, architecture |
-| `thinking-feedback-loops` | Identify reinforcing and balancing loops | Growth design, organizational dynamics |
-| `thinking-archetypes` | Recognize recurring system patterns | Organizational problems, recurring issues |
-| `thinking-ooda` | Rapid decision-making for dynamic situations | Incident response, competitive scenarios |
-| `thinking-leverage-points` | Find where small changes have big effects | System optimization, intervention design |
-| `thinking-theory-of-constraints` | Identify and manage bottlenecks | Performance optimization, throughput |
-| `thinking-cynefin` | Classify problems by complexity domain | Methodology selection, approach matching |
+| 技能                               | 描述                | 最适用场景       |
+| -------------------------------- | ----------------- | ----------- |
+| `thinking-systems`               | 从相互关联的整体中分析问题     | 复杂调试、架构分析   |
+| `thinking-feedback-loops`        | 识别强化回路与平衡回路       | 增长设计、组织动态   |
+| `thinking-archetypes`            | 识别反复出现的系统模式       | 组织问题、重复性问题  |
+| `thinking-ooda`                  | 面向动态环境的快速决策框架     | 事故响应、竞争场景   |
+| `thinking-leverage-points`       | 找到“小改动带来大影响”的杠杆点  | 系统优化、干预设计   |
+| `thinking-theory-of-constraints` | 识别并管理系统瓶颈         | 性能优化、吞吐提升   |
+| `thinking-cynefin`               | 按因果关系将问题划分为不同复杂度域 | 方法选择、匹配处理方式 |
 
-### Problem Solving & Innovation
+### 问题解决与创新
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-occams-razor` | Prefer simpler explanations | Debugging, architecture decisions |
-| `thinking-map-territory` | Recognize limits of mental models | Expectation mismatches, abstractions |
-| `thinking-circle-of-competence` | Know the boundaries of expertise | Delegation, learning decisions |
-| `thinking-triz` | Resolve technical contradictions | Engineering design, innovation |
-| `thinking-five-whys-plus` | Enhanced root cause analysis with bias guards | Debugging, incident postmortems |
-| `thinking-scientific-method` | Hypothesis-driven investigation | Debugging, A/B testing, experimentation |
-| `thinking-thought-experiment` | Structured imagination for exploration | Architecture, edge cases, philosophy |
+| 技能                              | 描述                | 最适用场景          |
+| ------------------------------- | ----------------- | -------------- |
+| `thinking-occams-razor`         | 优先采用更简单的解释        | 调试、架构决策        |
+| `thinking-map-territory`        | 认识到模型与现实之间的差异     | 预期偏差、抽象理解      |
+| `thinking-circle-of-competence` | 明确自己能力边界          | 委派、学习决策        |
+| `thinking-triz`                 | 解决技术矛盾            | 工程设计、创新        |
+| `thinking-five-whys-plus`       | 带有偏差防护的增强版“五个为什么” | 调试、事故复盘        |
+| `thinking-scientific-method`    | 基于假设驱动的调查方法       | 调试、A/B 测试、实验设计 |
+| `thinking-thought-experiment`   | 通过结构化想象进行探索       | 架构、边界情况、哲学思考   |
 
-### Estimation & Risk
+### 估算与风险
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-fermi-estimation` | Order-of-magnitude calculations | Quick sizing, feasibility checks |
-| `thinking-margin-of-safety` | Build in buffers for uncertainty | Risk management, system design |
-| `thinking-lindy-effect` | Older things likely to last longer | Technology selection, durability |
-| `thinking-via-negativa` | Improve by removing, not adding | Simplification, robustness |
-| `thinking-red-team` | Attack your own plans adversarially | Security review, plan validation |
+| 技能                          | 描述             | 最适用场景        |
+| --------------------------- | -------------- | ------------ |
+| `thinking-fermi-estimation` | 数量级估算方法        | 快速规模判断、可行性评估 |
+| `thinking-margin-of-safety` | 为不确定性预留缓冲空间    | 风险管理、系统设计    |
+| `thinking-lindy-effect`     | 越 오래存在的事物越可能持续 | 技术选型、耐久性判断   |
+| `thinking-via-negativa`     | 通过移除而不是增加来改进   | 简化、提升鲁棒性     |
+| `thinking-red-team`         | 以对抗视角攻击自己的方案   | 安全审查、方案验证    |
 
-### Product & Innovation
+### 产品与创新
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-jobs-to-be-done` | Understand the job customers hire products for | Product development, feature design |
-| `thinking-effectuation` | Start with means, not goals | Startups, innovation, uncertainty |
+| 技能                         | 描述               | 最适用场景       |
+| -------------------------- | ---------------- | ----------- |
+| `thinking-jobs-to-be-done` | 理解用户“雇佣”产品来完成的任务 | 产品开发、功能设计   |
+| `thinking-effectuation`    | 从已有资源出发，而非从目标出发  | 创业、创新、不确定环境 |
 
-### Meta-Skills
+### 元技能
 
-| Skill | Description | Best For |
-|-------|-------------|----------|
-| `thinking-model-router` | **START HERE** - Route to the right model by domain | Entry point for all thinking skills |
-| `thinking-model-selection` | Choose the right model for the problem | New problems, approach selection |
-| `thinking-model-combination` | Combine multiple models for richer analysis | Complex problems, high-stakes decisions |
+| 技能                           | 描述                       | 最适用场景      |
+| ---------------------------- | ------------------------ | ---------- |
+| `thinking-model-router`      | **从这里开始** —— 按问题域路由到合适模型 | 所有思维技能的入口  |
+| `thinking-model-selection`   | 为问题选择最合适的模型              | 新问题、方法选择   |
+| `thinking-model-combination` | 组合多个模型，得到更丰富的分析          | 复杂问题、高风险决策 |
 
-## Quality Assurance Tools
+## 质量保证工具
 
-This collection includes scripts to maintain and improve skill quality:
+这个集合还包含用于维护和提升技能质量的脚本工具：
 
-### Validate Skills
+### 校验技能
 
-Check all skills against quality criteria:
+根据质量标准检查所有技能：
 
 ```bash
 node scripts/validate-skills.js
 ```
 
-Outputs a report showing:
-- Required sections present/missing
-- Quality metrics (examples, tables, checklists)
-- Overall score per skill
-- Skills needing attention
+输出报告包括：
 
-### Generate Enhancement Suggestions
+* 必需部分是否齐全
+* 质量指标（示例、表格、清单等）
+* 每个技能的总体评分
+* 需要改进的技能列表
 
-Get specific improvement suggestions for a skill:
+### 生成增强建议
+
+为某个技能生成具体的改进建议：
 
 ```bash
-# Single skill
+# 单个技能
 node scripts/enhance-skill.js thinking-first-principles
 
-# All skills summary
+# 所有技能的汇总建议
 node scripts/enhance-skill.js
 ```
 
-### Generate AI Improvement Prompts
+### 生成 AI 改进提示词
 
-Create prompts for Claude to enhance skills:
+为 Claude 生成用于增强技能的提示词：
 
 ```bash
 node scripts/generate-improvement-prompt.js thinking-bayesian
 ```
 
-This generates a detailed prompt you can use with Claude Code to systematically improve any skill.
+这会生成一份详细提示词，你可以将其交给 Claude Code，系统性地改进任意技能。
 
-## Detailed Skill Descriptions
+## 详细技能说明
 
-### First Principles Thinking
-Strip away assumptions to reveal fundamental truths, then rebuild solutions from basics. Championed by Elon Musk and rooted in Aristotle's philosophy.
+### 第一性原理思维
 
-**When to use:**
-- Conventional approaches have failed
-- You're told something is "impossible"
-- Need innovation, not incremental improvement
+剥离假设，找到最底层的真实约束与基本事实，再从这些基础出发重建解决方案。该方法由 Elon Musk 推广，其思想源头可以追溯到亚里士多德哲学。
 
-### Bayesian Reasoning
-Update beliefs systematically based on new evidence. Provides a framework for thinking about probability and uncertainty.
+**适用场景：**
 
-**When to use:**
-- Estimating probabilities or likelihoods
-- Interpreting test results or metrics
-- Making decisions with incomplete information
+* 传统方法已经失效
+* 你被告知某件事“不可能”
+* 你需要的是创新，而不是渐进式优化
 
-### Systems Thinking
-View problems as part of interconnected wholes with feedback loops and emergent properties. Essential for debugging complex distributed systems.
+### 贝叶斯推理
 
-**When to use:**
-- Debugging spans multiple components
-- Fix in one place breaks another
-- Behavior seems emergent or unexpected
+根据新证据系统性地更新自己的判断。它提供了一套关于概率与不确定性的思考框架。
 
-### Theory of Constraints
-Every system has exactly one constraint limiting throughput. Optimizing anything else is wasted effort. Based on Eliyahu Goldratt's work.
+**适用场景：**
 
-**When to use:**
-- Performance optimization
-- Process improvement
-- Resource allocation
-- Identifying bottlenecks
+* 估计概率或可能性
+* 解读测试结果或指标数据
+* 在信息不完整的条件下做决策
 
-### Cynefin Framework
-Classify problems by the relationship between cause and effect: Clear, Complicated, Complex, or Chaotic. Each domain requires a different approach.
+### 系统思维
 
-**When to use:**
-- Choosing methodologies
-- Understanding why approaches fail
-- Crisis management
+将问题视为由多个相互作用部分构成的整体，关注反馈回路和涌现行为。这对于调试复杂分布式系统尤为重要。
 
-### Jobs to Be Done
-Customers don't buy products—they hire them to do jobs. Understanding the job unlocks innovation.
+**适用场景：**
 
-**When to use:**
-- Product development
-- Feature prioritization
-- Understanding customer behavior
+* 调试问题跨越多个组件
+* 修复一个地方却在别处引发问题
+* 行为呈现出涌现性或难以直观看懂
 
-### Red Team Thinking
-Attack your own plans before adversaries do. The best defense is knowing your weaknesses.
+### 约束理论
 
-**When to use:**
-- Security review
-- Pre-launch preparation
-- Plan stress-testing
+任何系统中都只有一个真正限制吞吐量的约束点。优化其他地方通常都是浪费。这一理论基于 Eliyahu Goldratt 的研究。
 
-## Contributing
+**适用场景：**
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+* 性能优化
+* 流程改进
+* 资源分配
+* 识别瓶颈
 
-### Adding New Skills
+### Cynefin 框架
 
-1. Create a new directory under `skills/` with the format `thinking-{name}`
-2. Add a `SKILL.md` file with YAML frontmatter:
+根据因果关系的可识别程度，将问题划分为：清晰（Clear）、繁杂（Complicated）、复杂（Complex）和混乱（Chaotic）四类。不同类别的问题需要不同的应对方式。
+
+**适用场景：**
+
+* 选择方法论
+* 理解为什么某种方法失效
+* 危机管理
+
+### 待完成工作（Jobs to Be Done）
+
+用户购买的不是产品本身，而是产品所完成的“任务”。真正理解这个任务，才能打开创新空间。
+
+**适用场景：**
+
+* 产品开发
+* 功能优先级排序
+* 理解用户行为
+
+### 红队思维
+
+在对手替你发现漏洞之前，先主动攻击自己的方案。最好的防御，是先知道自己的弱点在哪里。
+
+**适用场景：**
+
+* 安全审查
+* 上线前准备
+* 方案压力测试
+
+## 贡献
+
+欢迎贡献！请查看 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详细指南。
+
+### 添加新技能
+
+1. 在 `skills/` 目录下新建一个名为 `thinking-{name}` 的目录
+2. 添加一个带有 YAML frontmatter 的 `SKILL.md` 文件：
+
 ```yaml
 ---
 name: thinking-your-skill-name
-description: Brief description under 200 chars (used by Claude Code for skill matching)
+description: 简短描述，不超过 200 个字符（Claude Code 用它来匹配技能）
 ---
 ```
-3. Write comprehensive documentation with:
-   - Overview and core principle
-   - When to use decision flow
-   - Step-by-step process
-   - At least 2 practical examples
-   - Reusable template
-   - Verification checklist
-   - Key questions
 
-4. Validate your skill:
+3. 编写完整文档，内容应包括：
+
+   * 概述与核心原则
+   * 何时使用的判断流程
+   * 分步过程说明
+   * 至少 2 个实际案例
+   * 可复用模板
+   * 验证清单
+   * 关键问题
+
+4. 校验你的技能：
+
 ```bash
 node scripts/validate-skills.js
 ```
 
-## Keywords
+## 关键词
 
 `claude-code` `claude` `anthropic` `ai` `skills` `mental-models` `critical-thinking` `decision-making` `problem-solving` `systems-thinking` `first-principles` `bayesian-reasoning` `cognitive-bias` `strategic-thinking` `frameworks` `triz` `ooda` `pre-mortem` `socratic-method` `theory-of-constraints` `cynefin` `jobs-to-be-done` `red-team` `fermi-estimation`
 
-## Related Resources
+## 相关资源
 
-- [Claude Code Documentation](https://docs.anthropic.com/claude-code)
-- [Charlie Munger's Mental Models](https://fs.blog/mental-models/)
-- [Thinking in Systems - Donella Meadows](https://www.chelseagreen.com/product/thinking-in-systems/)
-- [Thinking, Fast and Slow - Daniel Kahneman](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555)
-- [The Goal - Eliyahu Goldratt](https://www.amazon.com/Goal-Process-Ongoing-Improvement/dp/0884271951)
+* [Claude Code Documentation](https://docs.anthropic.com/claude-code)
+* [Charlie Munger's Mental Models](https://fs.blog/mental-models/)
+* [Thinking in Systems - Donella Meadows](https://www.chelseagreen.com/product/thinking-in-systems/)
+* [Thinking, Fast and Slow - Daniel Kahneman](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555)
+* [The Goal - Eliyahu Goldratt](https://www.amazon.com/Goal-Process-Ongoing-Improvement/dp/0884271951)
 
-## License
+## 许可证
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License —— 详见 [LICENSE](LICENSE)
 
-## Author
+## 作者
 
-Created by [TJ Boudreaux](https://github.com/tjboudreaux)
+由 [TJ Boudreaux](https://github.com/tjboudreaux) 创建
 
 ---
 
-**Found this useful?** Give it a star and share with others who could benefit from better thinking frameworks in Claude Code.
+**觉得有用的话，欢迎点个 Star，并分享给其他也能从这些思维框架中受益的人。**
+
